@@ -1,14 +1,11 @@
 import Sidebar from "@/components/Sidebar";
 import "@/styles/globals.css";
-import { ThemeProvider } from "next-themes";
 import type { AppProps } from "next/app";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider enableSystem={true} attribute="class">
-      <Sidebar>
-        <Component {...pageProps} />
-      </Sidebar>
-    </ThemeProvider>
+    <Sidebar>
+      <Component {...pageProps} />
+    </Sidebar>
   );
 }
